@@ -13,3 +13,4 @@
 ## Buyers
 - As a buyer I want to be able to know if the product is out of stock
 - As a buyer I want to be able to wishlist products
+- As a buyer I want to know price, ratings and description of the project
