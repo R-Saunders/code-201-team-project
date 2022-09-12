@@ -17,8 +17,8 @@
 
 ## Buyers
 - As a **buyer** I want to be able to **see pictures of a product** so I **know what I am buying**
-- As a **buyer** I want to be able to **know if the product is out of stock** **so i don't waste time**
 - As a **buyer** I want to know **price of a product** so **I know how much I will have to spend**
+- As a **buyer** I want to be able to **know if the product is out of stock** **so i don't waste time**
 - As a **buyer** I want to know the products **ratings** so I know I am **purchasing quality goods**
 - As a **buyer** I want to see a **description of the product** so I **know the product in more detail**
 - As a **buyer** I want to be able to **contact a seller** so that I can **enquire about the product**
