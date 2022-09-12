@@ -13,7 +13,7 @@
 - As a **seller** I want to be able to **show discounted items** so **that I may have a sale section**
 - As a **seller** I want to be able to **collect feedback for my products** so that I **can improve my products**
 - As a **seller** I want to be able to **show a warranty on my product** so that my customers know **how long I guarantee the product for**
-- As a **seller** I want to be able to **provide a product specification** so that my customers can see more in depth information
+- As a **seller** I want to be able to **provide a product specification** so that my customers **can see more in depth information**
 
 ## Buyers
 - As a **buyer** I want to be able to **know if the product is out of stock** **so i don't waste time**
