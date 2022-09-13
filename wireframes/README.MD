@@ -3,4 +3,5 @@
 ## To Do
 - Homepage
 - Seller page
-- Page by Category
+- Products by Category (does this want to be a page or just a filter?)
+- Product page
