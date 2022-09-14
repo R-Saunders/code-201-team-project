@@ -64,6 +64,10 @@ delete the images
 }
 
 
+5) Click on logo --> Return to home screen
+
+6) Image doesn't display --> show the alt
+
 
 
 
