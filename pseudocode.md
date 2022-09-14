@@ -1,6 +1,67 @@
-1)item selection
-if (){
-customer clicks on image show detailed description of item
+#Pseudo code for Seller
+
+1) Product Specifications(description of product)
+
+if(seller wants to edit product description)
+{
+seller can add product description
+}
+
+elif
+{
+seller can edit product description
+}
+
+else
+{
+seller can delete product description
+}
+
+
+2) Discounted items
+
+Add a discount to the item
+
+if(item selling more)
+{
+Discount = 25%
+}
+
+elif(item selling on average)
+{
+Discount = 50%
+
+else
+{
+Discount = 75%
+}
+
+
+3) Category tag(Electronics, clothing etc)
+
+if(seller wants to add images )
+{
+click on add images 
+}
+
+else
+{
+delete the images
+}
+
+
+
+
+
+
+
+
+
+#Pseudo code for Buyer
+
+1)Item selection
+if (customer clicks on image){
+show detailed description of item
 }
 
 else {
