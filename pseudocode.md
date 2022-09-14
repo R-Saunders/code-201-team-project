@@ -68,6 +68,10 @@ delete the images
 
 6) Image doesn't display --> show the alt
 
+7) Click on hyperlink --> Redirect to another page
+
+8) Click on search bar --> Provide suggestions
+
 
 
 
@@ -91,18 +95,21 @@ else
 }
 
 
+2)Buying a product
+
+if(customer wants to buy a product now)
+{
+Clicks "BUY NOW"
+}
+
+else
+{
+Clicks "ADD TO CART"
+}
 
 
 
-
-
-
-
-
-
-
-
-1)Item selection
+3)Item selection
 if (customer clicks on image){
 show detailed description of item
 }
