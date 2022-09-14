@@ -1,4 +1,4 @@
-#Pseudo code for Seller
+**#Pseudo code for Seller
 
 1) Product Specifications(description of product)
 
@@ -37,7 +37,21 @@ Discount = 75%
 }
 
 
-3) Category tag(Electronics, clothing etc)
+3)Feedback
+
+if(customer bought the item)
+{
+ He can write the feedback
+}
+
+else
+{
+Just read the feedback
+}
+
+
+
+4) Category tag(Electronics, clothing etc)
 
 if(seller wants to add images )
 {
@@ -57,7 +71,32 @@ delete the images
 
 
 
-#Pseudo code for Buyer
+**#Pseudo code for Buyer
+
+
+1)Out of stock
+
+If(product is out of stock)
+{
+Show "OUT OF STOCK"
+}
+
+else
+{
+"AVAILABLE"
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 1)Item selection
 if (customer clicks on image){
