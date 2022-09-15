@@ -73,6 +73,46 @@ delete the images
 8) Click on search bar --> Provide suggestions
 
 
+9) Carousel --> inside division class --> img - 1,2,3,4,5
+
+10) Add images to product 
+
+
+// Creating the object
+
+const x = {name: "mobile", price: "£50", rating: 4, color: "blue"};
+
+x.name; //prints the name of the mobile
+x.price; //prints the price of the mobile 
+x.rating; //prints the rating of the mobile
+x.color; //prints the color of the mobile
+
+function functionname(name, price, rating, color){
+
+  writing a function to use the arguments in the function in different ways
+
+}
+
+
+
+
+11) list of seller products in the website
+
+const x = [ "mobile", "Television", Washing Machine" ]; 
+
+for (let i = 0; i < x.length; i++) {
+
+  print x[i]; //prints all the seller products
+  
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -117,8 +157,6 @@ show detailed description of item
 else {
 just pop up the image
 }
-
-2)
 
 
 
