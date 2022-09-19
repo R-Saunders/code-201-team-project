@@ -1,0 +1,15 @@
+header {
+  background-color: #FFF3E0;
+}
+
+nav {
+  background-color: #E8DDC1;
+}
+
+header {
+  max-height: 150px;
+}
+
+header img {
+  height: 120px;
+}
