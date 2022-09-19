@@ -6,10 +6,21 @@ nav {
   background-color: #E8DDC1;
 }
 
-header {
-  max-height: 150px;
-}
-
 header img {
   height: 120px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+#socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+#footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
