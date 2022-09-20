@@ -1,7 +1,7 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 10) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 5) {
     document.getElementById("marketplace-logo").style.width = "0";
     document.getElementById("marketplace-logo").style.height = "0";
   } else {
