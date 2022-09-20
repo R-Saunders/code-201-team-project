@@ -82,3 +82,12 @@ footer a:hover {
 #marketplace-logo {
   transition: 0.5s;
 }
+
+form {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1rem;
+  border: 1px solid darkgrey;
+  margin: 1rem;
+  box-shadow: 2px 2px 10px grey;
+}
