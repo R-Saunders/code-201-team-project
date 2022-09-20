@@ -44,10 +44,10 @@
 				<div class="collapse navbar-collapse col-12" id="navbarNav">
 					<ul class="navbar-nav col-12 justify-content-center">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Home</a>
+							<a class="nav-link" href="index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">All Products</a>
+							<a class="nav-link" href="products.html">All Products</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Sale Items</a>
@@ -337,6 +337,18 @@
 			integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 			crossorigin="anonymous"
 		></script>
-		<script src="script.js"></script>
+		<script src="script.js">
+      window.onscroll = function() {scrollFunction2()};
+
+      function scrollFunction2() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 10) {
+          document.getElementById("carousel-text").style.bottom = "120px";
+        } else {
+          document.getElementById("carousel-text").style.bottom = "0";
+        }
+      }
+
+
+    </script>
 	</body>
 </html>
