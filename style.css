@@ -86,8 +86,12 @@ footer a:hover {
 form {
   background-color: white;
   border-radius: 2rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: 1px solid darkgrey;
   margin: 1rem;
   box-shadow: 2px 2px 10px grey;
+}
+
+input[type=file] {
+  height: auto;
 }

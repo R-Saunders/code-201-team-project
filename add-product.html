@@ -66,19 +66,42 @@
 		</header>
     <main class="container-fluid">
 
-      <form class="pt-2">
+      <form>
         <div class="form-group">
-          <label for="seller-name-input">Seller Name:</label>
-          <input type="text" class="form-control" id="seller-name-input" placeholder="Seller Name">
+          <label for="product-seller-input">Seller</label>
+          <select type="select" class="form-control" id="product-seller-input">
+						<option value="seller1">Seller 1</option>
+						<option value="seller2">Seller 2</option>
+						<option value="seller3">Seller 3</option>
+						<option value="seller4">Seller 4</option>
+						<option value="seller5">Seller 5</option>
+						<option value="seller6">Seller 6</option>
+					</select>
         </div>
         <div class="form-group">
-          <label for="seller-desc-input">Description: </label>
-          <textarea class="form-control" id="seller-dessc-input" placeholder="Write a description for you or your business here."></textarea>
+          <label for="product-name-input">Product Name: </label>
+          <input type="text" id="product-name-input" class="form-control">
         </div>
         <div class="form-group">
-          <label for="seller-logo-input">Seller Photo Logo</label>
-          <input type="file" class="form-control"  id="seller-logo-input">
+          <label for="product-image-input">Product Image</label>
+          <input type="file" class="form-control"  id="product-image-input">
         </div>
+				<div class="form-group">
+					<label for="product-price-input">Price (£0.00)</label>
+					<input type="number" id="product-price-input" class="form-control" placeholder="0.00" step="0.01">
+				</div>
+				<div class="form-group">
+					<label for="product-discount-input">Product Discount (%)</label>
+					<input type="number" name="product-discount-input" class="form-control" id="product-discount-input">
+				</div>
+				<div class="form-group">
+					<label for="product-stock-input">Available Stock</label>
+					<input type="checkbox" id="product-stock-input">
+				</div>
+				<div class="form-group">
+					<label for="product-desc-input">Product Description</label>
+					<textarea name="product-desc-input" id="product-desc-input" class="form-control" cols="30" rows="10"></textarea>
+				</div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
