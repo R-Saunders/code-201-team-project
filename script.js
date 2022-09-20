@@ -1,0 +1,14 @@
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 10) {
+    document.getElementById("marketplace-logo").style.width = "0";
+    document.getElementById("marketplace-logo").style.height = "0";
+    document.getElementById("carousel-text").style.bottom = "120px";
+  } else {
+    document.getElementById("marketplace-logo").style.width = "120px";
+    document.getElementById("marketplace-logo").style.height = "120px";
+    document.getElementById("carousel-text").style.bottom = "0";
+  }
+}
+

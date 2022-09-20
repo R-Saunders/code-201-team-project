@@ -1,9 +1,14 @@
 header {
   background-color: #FFF3E0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 body {
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
@@ -38,4 +43,28 @@ footer ul {
 
 #seller-logo-input {
   height: auto;
+}
+
+#products-carousel {
+  max-height: calc(100vh - 176px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+#carousel-text {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-shadow: 0 0 darkslategray;
+  transition: 0.5s;
+}
+
+#marketplace-logo {
+  transition: 0.5s;
 }
