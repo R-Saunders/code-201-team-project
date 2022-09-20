@@ -29,6 +29,19 @@ footer ul {
   list-style-type: none;
 }
 
+footer {
+  background-color: #876595;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: lightgrey;
+}
+
 #socials {
   display: flex;
   gap: 1rem;
