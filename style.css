@@ -1,0 +1,41 @@
+header {
+  background-color: #FFF3E0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #E8DDC1;
+}
+
+header img {
+  height: 120px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 352px);
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+#socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+#footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#seller-logo-input {
+  height: auto;
+}
