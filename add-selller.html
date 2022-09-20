@@ -14,7 +14,7 @@
 			crossorigin="anonymous"
 		></script>
   </head>
-  <body>
+  <body class="container-fluid">
     <header class="row justify-content-center align-items-center">
 			<img src="img/Marketplace.svg" alt="Marketplace Logo" />
 			<nav
@@ -52,11 +52,27 @@
 				</div>
 			</nav>
 		</header>
-    <main>
+    <main class="container-fluid">
+
+      <form class="pt-2">
+        <div class="form-group">
+          <label for="seller-name-input">Seller Name:</label>
+          <input type="text" class="form-control" id="seller-name-input" placeholder="Seller Name">
+        </div>
+        <div class="form-group">
+          <label for="seller-desc-input">Description: </label>
+          <textarea class="form-control" id="seller-dessc-input" placeholder="Write a description for you or your business here."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="seller-logo-input">Seller Photo Logo</label>
+          <input type="file" class="form-control"  id="seller-logo-input">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
     </main>
     <footer class="row bg-light p-2">
-			<div id="footer-inner" class="col-12 d-flex justify-content-center align-items-center">
+			<div id="footer-inner" class="d-flex justify-content-between align-items-center">
 				<ul class="col-6" id="contact">
 					<li>Marketplace</li>
 					<li>The Street</li>
