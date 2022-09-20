@@ -139,7 +139,7 @@ input[type=file] {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: purple;
+  background-color: #876595;
   mix-blend-mode: soft-light;
   opacity: 0.9;
   position: absolute;
@@ -158,7 +158,7 @@ input[type=file] {
   max-height: calc(100vh - 176px);
 }
 
-#become-seller {
+#become-seller, #add-product {
   position: absolute;
   top: 50%;
   z-index: 80;
@@ -167,10 +167,10 @@ input[type=file] {
   font-size: 4rem;
   text-align: center;
   width: 100%;
-  text-shadow: 5px 5px 10px grey;
+  text-shadow: 5px 5px 10px black;
 }
 
-#become-seller-wrapper {
+#become-seller-wrapper, #add-product-wrapper {
   position: relative;
   margin: 0;
 }
