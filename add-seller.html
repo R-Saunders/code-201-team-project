@@ -72,7 +72,7 @@
 			</nav>
 		</header>
 		<main class="container-fluid">
-			<form class="pt-2">
+			<form class="pt-2" id="add-seller-form" onsubmit="addSeller(event)">
 				<legend>Become a seller on Marketplace</legend>
 				<div class="form-group">
 					<label for="seller-name-input">Seller Name:</label>
@@ -87,7 +87,7 @@
 					<label for="seller-desc-input">Description: </label>
 					<textarea
 						class="form-control"
-						id="seller-dessc-input"
+						id="seller-desc-input"
 						placeholder="Write a description for you or your business here."
 					></textarea>
 				</div>
