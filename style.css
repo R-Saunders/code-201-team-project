@@ -176,20 +176,16 @@ input[type=file] {
 }
 
 #carousel-section {
-  height: calc(100vh - 172px);
+  min-height: calc(100vh - 172px);
   position: relative;
 }
 
 .carousel-item img {
-  height: calc(100vh - 172px);
-}
-
-.carousel-item h5 {
-  
+  min-height: calc(100vh - 172px);
 }
 
 #carousel-overlay {
-  height: calc(100vh - 172px);
+  height: 100%;
   background-color: black;
   width: 100%;
   position: absolute;
