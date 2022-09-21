@@ -223,9 +223,14 @@ input[type=file] {
 .featured-products-container img, .sale-products-container img {
   height: 350px;
   width: 350px;
-  padding: 1rem;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 4% 4% 0 0;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.featured-products-container img:hover, .sale-products-container img:hover {
+  transform: scale(1.1);
 }
 
 .featured-products-container .card, .sale-products-container .card {
@@ -277,4 +282,8 @@ section {
 section:first-of-type {
   border-radius: 0 0 1rem 1rem;
   margin-top: 0;
+}
+
+.image-card-container {
+  overflow: hidden;
 }
