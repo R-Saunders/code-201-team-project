@@ -182,6 +182,7 @@ input[type=file] {
 
 .carousel-item img {
   min-height: calc(100vh - 172px);
+  object-fit: cover;
 }
 
 #carousel-overlay {
