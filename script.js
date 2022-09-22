@@ -94,36 +94,75 @@ function addProduct(event) {
   syncProducts();
 }
 
+// Function to create cards from a seller array
+// Function accepts;
+// producList = array of sellers
+// sellerCardCount = number of cards you want to render
+// outputTarget = an ID of where to render the cards in the dom 
+
+function createSellerCards(sellerList, sellerCardCount, outputTarget) {
+  let cardOutput = document.getElementById(outputTarget);
+  for (let i = 0; i < sellerCardCount; i++) {
+    let currentSeller = sellerList[i];
+    let card = document.createElement('div');
+    card.classList.add('image-left-card','col-6','d-flex');
+    let cardImage = document.createElement('img');
+    cardImage.classList.add('w-50');
+    cardImage.alt = currentSeller.sellerName;
+    cardImage.src = 'img/sellers/' + currentSeller.sellerImage;
+    card.appendChild(cardImage);
+    let cardText = document.createElement('div');
+    card.appendChild(cardText);
+    let cardTitle = document.createElement('h3');
+    cardTitle.innerHTML = currentSeller.sellerName;
+    cardText.appendChild(cardTitle);
+    let cardDesc = document.createElement('p');
+    cardDesc.innerHTML = currentSeller.sellerDesc;
+    cardText.appendChild(cardDesc);
+    let cardButton = document.createElement('a');
+    cardButton.classList.add('btn','btn-primary');
+    cardButton.innerHTML = `See more from ${currentSeller.sellerName}`;
+    cardOutput.appendChild(card);
+  }
+}
+
 // Function to create cards from a product array
+// Function accepts;
+// producList = array of products
+// cardCount = number of cards you want to render
+// outputTarget = an ID of where to render the cards in the dom 
 
 function createCards(productList, cardCount, outputTarget) {
   let cardOutput = document.getElementById(outputTarget);
   for (let i = 0; i < cardCount; i++) {
-        let curentProduct = productList[i];
-        let card = document.createElement('div');
-        card.classList.add('card');
-        let cardImageContainer = document.createElement('div');
-        cardImageContainer.classList.add('image-card-container');
-        card.appendChild(cardImageContainer);
-        let cardImage = document.createElement('img');
-        cardImage.classList.add('card-img-top');
-        cardImage.alt = curentProduct.productName;
-        cardImage.src = 'img/products/' + curentProduct.productImage;
-        cardImageContainer.appendChild(cardImage);
-        let cardBody = document.createElement('div');
-        cardBody.classList.add('card-body');
-        card.appendChild(cardBody);
-        let cardTitle = document.createElement('h5');
-        cardTitle.classList.add('card-title');
-        cardTitle.innerHTML = curentProduct.productName;
-        cardBody.appendChild(cardTitle);
-        let cardButton = document.createElement('a');
-        cardButton.classList.add('btn','btn-primary');
-        cardButton.innerHTML = 'See More'
-        cardBody.appendChild(cardButton);
-        cardOutput.appendChild(card);
+    let curentProduct = productList[i];
+    let card = document.createElement('div');
+    card.classList.add('card');
+    let cardImageContainer = document.createElement('div');
+    cardImageContainer.classList.add('image-card-container');
+    card.appendChild(cardImageContainer);
+    let cardImage = document.createElement('img');
+    cardImage.classList.add('card-img-top');
+    cardImage.alt = curentProduct.productName;
+    cardImage.src = 'img/products/' + curentProduct.productImage;
+    cardImageContainer.appendChild(cardImage);
+    let cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
+    card.appendChild(cardBody);
+    let cardTitle = document.createElement('h5');
+    cardTitle.classList.add('card-title');
+    cardTitle.innerHTML = curentProduct.productName;
+    cardBody.appendChild(cardTitle);
+    let cardButton = document.createElement('a');
+    cardButton.classList.add('btn','btn-primary');
+    cardButton.innerHTML = 'See More'
+    cardBody.appendChild(cardButton);
+    cardOutput.appendChild(card);
   }
 }
 
 // Create six product cards for featured products section on homepage
 createCards(allProducts, 6, 'featured-products-inner');
+
+// Create two seller cards for featured sellers section on homepage
+createSellerCards(allSellers, 2, 'featured-sellers-inner');

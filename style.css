@@ -250,12 +250,12 @@ section {
   border-radius: 1rem;
 }
 
-.featured-sellers-container {
+#featured-sellers-container {
   background-image: url(img/bg/tic-tac-toe.svg);
   background-color: #e5dbdb;
 }
 
-.featured-sellers-container h2 {
+#featured-sellers-container h2 {
   clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 10% 50%, 0% 0%);
   background-color: #ac9292;
   padding: 1rem 5rem;
@@ -263,7 +263,7 @@ section {
   border-top: 5px dashed white;
 }
 
-.featured-sellers-inner img {
+#featured-sellers-inner img {
   object-fit: cover;
 }
 
