@@ -72,8 +72,8 @@
       <form onsubmit="addProduct(event)" id="add-product-form">
 				<legend>List an Item on Marketplace</legend>
         <div class="form-group">
-          <label for="product-seller-input">Seller</label>
-          <select type="select" class="form-control" id="product-seller-input">
+          <label for="productSellerInput">Seller</label>
+          <select type="select" class="form-control" id="productSellerInput">
 						<option value="seller1">Seller 1</option>
 						<option value="seller2">Seller 2</option>
 						<option value="seller3">Seller 3</option>
@@ -83,28 +83,28 @@
 					</select>
         </div>
         <div class="form-group">
-          <label for="product-name-input">Product Name: </label>
-          <input type="text" id="product-name-input" class="form-control">
+          <label for="productNameInput">Product Name: </label>
+          <input type="text" id="productNameInput" class="form-control" required>
         </div>
         <div class="form-group">
-          <label for="product-image-input">Product Image</label>
-          <input type="file" class="form-control"  id="product-image-input">
+          <label for="productImageInput">Product Image</label>
+          <input type="file" class="form-control"  id="productImageInput" required>
         </div>
 				<div class="form-group">
-					<label for="product-price-input">Price (£0.00)</label>
-					<input type="number" id="product-price-input" class="form-control" placeholder="0.00" step="0.01">
+					<label for="productPriceInput">Price (£0.00)</label>
+					<input type="number" id="productPriceInput" class="form-control" placeholder="0.00" step="0.01" required>
 				</div>
 				<div class="form-group">
-					<label for="product-discount-input">Product Discount (%)</label>
-					<input type="number" name="product-discount-input" class="form-control" id="product-discount-input">
+					<label for="productDiscountInput">Product Discount (%)</label>
+					<input type="number" name="productDiscountInput" class="form-control" id="productDiscountInput">
 				</div>
 				<div class="form-group">
-					<label for="product-stock-input">Available Stock</label>
-					<input type="checkbox" id="product-stock-input">
+					<label for="productStockInput">Available Stock</label>
+					<input type="checkbox" id="productStockInput" required>
 				</div>
 				<div class="form-group">
-					<label for="product-desc-input">Product Description</label>
-					<textarea name="product-desc-input" id="product-desc-input" class="form-control" cols="30" rows="10"></textarea>
+					<label for="productDescInput">Product Description</label>
+					<textarea name="productDescInput" id="productDescInput" class="form-control" cols="30" rows="10" required></textarea>
 				</div>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -141,3 +141,4 @@
 		<script src="script.js"></script>
   </body>
 </html>
+

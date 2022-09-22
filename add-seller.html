@@ -75,25 +75,27 @@
 			<form class="pt-2" id="add-seller-form" onsubmit="addSeller(event)">
 				<legend>Become a seller on Marketplace</legend>
 				<div class="form-group">
-					<label for="seller-name-input">Seller Name:</label>
+					<label for="sellerNameInput">Seller Name:</label>
 					<input
 						type="text"
 						class="form-control"
-						id="seller-name-input"
+						id="sellerNameInput"
 						placeholder="Seller Name"
+						required
 					/>
 				</div>
 				<div class="form-group">
-					<label for="seller-desc-input">Description: </label>
+					<label for="sellerDescInput">Description: </label>
 					<textarea
 						class="form-control"
-						id="seller-desc-input"
+						id="sellerDescInput"
 						placeholder="Write a description for you or your business here."
+						required
 					></textarea>
 				</div>
 				<div class="form-group">
-					<label for="seller-logo-input">Seller Photo Logo</label>
-					<input type="file" class="form-control" id="seller-logo-input" />
+					<label for="sellerImageInput">Seller Photo Logo</label>
+					<input type="file" class="form-control" id="sellerImageInput" required/>
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>

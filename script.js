@@ -65,6 +65,7 @@ function addProduct(event) {
   let productNameInput = event.target.productNameInput.value;
   let productImageInput = event.target.productImageInput.value;
   let productPriceInput = event.target.productPriceInput.value;
+  let productDiscountInput = event.target.productDiscountInput.value
   let productStockInput = event.target.productStockInput.value;
   let productDescInput = event.target.productDescInput.value;
   let newProduct = new product(
@@ -72,15 +73,10 @@ function addProduct(event) {
     productNameInput,
     productImageInput,
     productPriceInput,
+    productDiscountInput,
     productStockInput,
     productDescInput
   );
   allProducts.push(newProduct);
   document.getElementById("add-product-form").reset();
 }
-
-// Below error appears when submitting add product form - To be fixed
-
-// script.js:64 Uncaught TypeError: Cannot read properties of undefined (reading 'value')
-//     at addProduct (script.js:64:60)
-//     at HTMLFormElement.onsubmit (add-product.html?product-discount-input=12&product-desc-input=sdfsgdghdgbdfvzrefgvxf:72:64)
