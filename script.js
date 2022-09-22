@@ -42,7 +42,13 @@ let allSellers = [];
 let allProducts = [];
 
 // Sync with local storage
+function syncSellers() {
+  localStorage.setItem('sellers', JSON.stringify(allSellers));
+}
 
+function syncProducts() {
+  localStorage.setItem('products', JSON.stringify(allProducts));
+}
 
 // Function to grab data from add seller page form and push to all sellers array
 
@@ -58,6 +64,7 @@ function addSeller(event) {
   );
   allSellers.push(newSeller);
   document.getElementById("add-seller-form").reset();
+  syncSellers();
 }
 
 // Function to grab data from add product page form and push to all products array
@@ -82,6 +89,7 @@ function addProduct(event) {
   );
   allProducts.push(newProduct);
   document.getElementById("add-product-form").reset();
+  syncProducts();
 }
 
 // Function to create cards from a product array
@@ -98,7 +106,7 @@ function createCards(productList, cardCount, outputTarget) {
         let cardImage = document.createElement('img');
         cardImage.classList.add('card-img-top');
         cardImage.alt = curentProduct.productName;
-        cardImage.src = curentProduct.productImage;
+        cardImage.src = 'img/products/' + curentProduct.productImage;
         cardImageContainer.appendChild(cardImage);
         let cardBody = document.createElement('div');
         cardBody.classList.add('card-body');
@@ -115,3 +123,5 @@ function createCards(productList, cardCount, outputTarget) {
   }
 }
 
+// Create six product cards for featured products section on homepage
+createCards(allProducts, 6, 'featured-products-inner');
