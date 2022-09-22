@@ -41,6 +41,9 @@ class product {
 let allSellers = [];
 let allProducts = [];
 
+// Sync with local storage
+
+
 // Function to grab data from add seller page form and push to all sellers array
 
 function addSeller(event) {
@@ -80,3 +83,35 @@ function addProduct(event) {
   allProducts.push(newProduct);
   document.getElementById("add-product-form").reset();
 }
+
+// Function to create cards from a product array
+
+function createCards(productList, cardCount, outputTarget) {
+  let cardOutput = document.getElementById(outputTarget);
+  for (let i = 0; i < cardCount; i++) {
+        let curentProduct = productList[i];
+        let card = document.createElement('div');
+        card.classList.add('card');
+        let cardImageContainer = document.createElement('div');
+        cardImageContainer.classList.add('image-card-container');
+        card.appendChild(cardImageContainer);
+        let cardImage = document.createElement('img');
+        cardImage.classList.add('card-img-top');
+        cardImage.alt = curentProduct.productName;
+        cardImage.src = curentProduct.productImage;
+        cardImageContainer.appendChild(cardImage);
+        let cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+        card.appendChild(cardBody);
+        let cardTitle = document.createElement('h5');
+        cardTitle.classList.add('card-title');
+        cardTitle.innerHTML = curentProduct.productName;
+        cardBody.appendChild(cardTitle);
+        let cardButton = document.createElement('a');
+        cardButton.classList.add('btn','btn-primary');
+        cardButton.innerHTML = 'See More'
+        cardBody.appendChild(cardButton);
+        cardOutput.appendChild(card);
+  }
+}
+
