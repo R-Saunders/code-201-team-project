@@ -44,10 +44,12 @@ let allProducts = [];
 // Sync with local storage
 function syncSellers() {
   localStorage.setItem('sellers', JSON.stringify(allSellers));
+  allSellers = JSON.parse(localStorage.getItem('sellers'));
 }
 
 function syncProducts() {
   localStorage.setItem('products', JSON.stringify(allProducts));
+  allSellers = JSON.parse(localStorage.getItem('products'));
 }
 
 // Function to grab data from add seller page form and push to all sellers array
