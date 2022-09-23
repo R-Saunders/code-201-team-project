@@ -41,13 +41,13 @@ class product {
 let allSellers = [];
 let allProducts = [];
 let saleProducts = []
-let basket = []
-
+let basket = [];
+let featuredProducts = [];
 
 // Get local storage on page load
 function getData() {
-  allSellers = JSON.parse(localStorage.getItem('sellers'));
-  allProducts = JSON.parse(localStorage.getItem('products'));
+  allSellers = allSellers.concat(JSON.parse(localStorage.getItem('sellers')));
+  allProducts = allProducts.concat(JSON.parse(localStorage.getItem('products')));
 }
 
 getData();
@@ -189,3 +189,12 @@ function filterSaleProducts() {
 
   }
 }
+
+// Get a random item from an array.
+// arrayName represents the array you want to use.
+const getRandomArrayItem = function(arrayName) {
+  return Math.floor(Math.random() * arrayName.length);
+};
+
+let randomProducts = [];
+let randomSellers = [];
