@@ -46,8 +46,8 @@ let basket = []
 
 // Get local storage on page load
 function getData() {
-  allSellers = JSON.parse(localStorage.getItem('sellers'));
-  allProducts = JSON.parse(localStorage.getItem('products'));
+  allSellers.push(JSON.parse(localStorage.getItem('sellers')));
+  allProducts.push(JSON.parse(localStorage.getItem('products')));
 }
 
 getData();
@@ -63,48 +63,6 @@ function syncProducts() {
 
 function syncBasket() {
   localStorage.setItem('basket', JSON.stringify(basket));
-}
-
-// Function to grab data from add seller page form and push to all sellers array
-
-function addSeller(event) {
-  event.preventDefault();
-  let sellerNameInput = event.target.sellerNameInput.value;
-  let sellerDescInput = event.target.sellerDescInput.value;
-  let sellerImageInput = event.target.sellerImageInput.value;
-  let newSeller = new seller(
-    sellerNameInput,
-    sellerDescInput,
-    sellerImageInput
-  );
-  allSellers.push(newSeller);
-  document.getElementById("add-seller-form").reset();
-  syncSellers();
-}
-
-// Function to grab data from add product page form and push to all products array
-
-function addProduct(event) {
-  event.preventDefault();
-  let productSellerInput = event.target.productSellerInput.value;
-  let productNameInput = event.target.productNameInput.value;
-  let productImageInput = event.target.productImageInput.value;
-  let productPriceInput = event.target.productPriceInput.value;
-  let productDiscountInput = event.target.productDiscountInput.value
-  let productStockInput = event.target.productStockInput.value;
-  let productDescInput = event.target.productDescInput.value;
-  let newProduct = new product(
-    productSellerInput,
-    productNameInput,
-    productImageInput,
-    productPriceInput,
-    productDiscountInput,
-    productStockInput,
-    productDescInput
-  );
-  allProducts.push(newProduct);
-  document.getElementById("add-product-form").reset();
-  syncProducts();
 }
 
 // Function to create cards from a seller array
@@ -173,12 +131,6 @@ function createCards(productList, cardCount, outputTarget) {
     cardOutput.appendChild(card);
   }
 }
-
-// Create six product cards for featured products section on homepage
-createCards(allProducts, 6, 'featured-products-inner');
-
-// Create two seller cards for featured sellers section on homepage
-createSellerCards(allSellers, 2, 'featured-sellers-inner');
 
 // Create array of sales products
 function filterSaleProducts() {
