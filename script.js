@@ -36,12 +36,21 @@ class product {
   }
 }
 
-// Variables to store full array of sellers/products
+// Variables to store arrays of sellers/products
 
 let allSellers = [];
 let allProducts = [];
+let saleProducts = []
 
-// Sync with local storage
+// Get local storage on page load
+function getData() {
+  allSellers = JSON.parse(localStorage.getItem('sellers'));
+  allProducts = JSON.parse(localStorage.getItem('products'));
+}
+
+getData();
+
+// Sync array with local storage
 function syncSellers() {
   localStorage.setItem('sellers', JSON.stringify(allSellers));
   allSellers = JSON.parse(localStorage.getItem('sellers'));
@@ -49,7 +58,7 @@ function syncSellers() {
 
 function syncProducts() {
   localStorage.setItem('products', JSON.stringify(allProducts));
-  allSellers = JSON.parse(localStorage.getItem('products'));
+  allProducts = JSON.parse(localStorage.getItem('products'));
 }
 
 // Function to grab data from add seller page form and push to all sellers array
@@ -166,3 +175,13 @@ createCards(allProducts, 6, 'featured-products-inner');
 
 // Create two seller cards for featured sellers section on homepage
 createSellerCards(allSellers, 2, 'featured-sellers-inner');
+
+// Create array of sales products
+function filterSaleProducts() {
+  for (let i = 0; i < allProducts.length; i++) {
+    if (allProducts[i].productDiscount > 0) {
+      saleProducts.push(allProducts[i]);
+    }
+
+  }
+}
