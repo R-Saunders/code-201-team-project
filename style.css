@@ -298,6 +298,7 @@ input[type=file] {
   background-color: rgb(222, 229, 219);
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -314,6 +315,7 @@ input[type=file] {
   padding: 1rem 5rem;
   border-bottom: dashed 5px white;
   border-top: dashed 5px white;
+  width: fit-content;
 }
 
 #sale-products-container h2 {
@@ -340,9 +342,42 @@ input[type=file] {
   border-radius: 1rem;
 }
 
+.card {
+  background-color: white;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.card h5 {
+  font-size: 1.25em;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  border-color: #005fc7;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #005fc7;
+}
+
+.card:hover{
+  background-color: #005fc7;
+}
+
 #featured-products-inner, #sale-products-inner {
   gap: 1rem;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 section {
