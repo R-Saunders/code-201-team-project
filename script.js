@@ -41,6 +41,8 @@ class product {
 let allSellers = [];
 let allProducts = [];
 let saleProducts = []
+let basket = []
+
 
 // Get local storage on page load
 function getData() {
@@ -53,12 +55,14 @@ getData();
 // Sync array with local storage
 function syncSellers() {
   localStorage.setItem('sellers', JSON.stringify(allSellers));
-  allSellers = JSON.parse(localStorage.getItem('sellers'));
 }
 
 function syncProducts() {
   localStorage.setItem('products', JSON.stringify(allProducts));
-  allProducts = JSON.parse(localStorage.getItem('products'));
+}
+
+function syncBasket() {
+  localStorage.setItem('basket', JSON.stringify(basket));
 }
 
 // Function to grab data from add seller page form and push to all sellers array
