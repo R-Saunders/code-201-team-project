@@ -46,13 +46,8 @@ let featuredProducts = [];
 
 // Get local storage on page load
 function getData() {
-<<<<<<< HEAD:script.js
-  allSellers = allSellers.concat(JSON.parse(localStorage.getItem('sellers')));
-  allProducts = allProducts.concat(JSON.parse(localStorage.getItem('products')));
-=======
   allSellers.push(JSON.parse(localStorage.getItem('sellers')));
   allProducts.push(JSON.parse(localStorage.getItem('products')));
->>>>>>> 0390228d147e65004592a16e30925653bbbfb15f:scripts/global.js
 }
 
 getData();
@@ -147,7 +142,6 @@ function filterSaleProducts() {
   }
 }
 
-<<<<<<< HEAD:script.js
 // Get a random item from an array.
 // arrayName represents the array you want to use.
 const getRandomArrayItem = function(arrayName) {
@@ -156,7 +150,6 @@ const getRandomArrayItem = function(arrayName) {
 
 let randomProducts = [];
 let randomSellers = [];
-=======
 // Carousel function (homepage)
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -186,4 +179,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
->>>>>>> 0390228d147e65004592a16e30925653bbbfb15f:scripts/global.js
