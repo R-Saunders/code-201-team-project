@@ -171,6 +171,7 @@ footer ul {
 footer {
   background-color: #876595;
   color: white;
+  padding: 1rem;
 }
 
 footer a {
@@ -191,6 +192,9 @@ footer a:hover {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #seller-logo-input {
@@ -305,6 +309,9 @@ input[type=file] {
 #sale-products-container {
   background-image: url(img/bg/hexagons.svg);
   background-color: #decee4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #featured-products-container h2, #sale-products-container h2 {
@@ -335,6 +342,7 @@ input[type=file] {
 
 #featured-products-container img:hover, #sale-products-container img:hover {
   transform: scale(1.1);
+  border-radius: 4.25rem;
 }
 
 #featured-products-container .card, #sale-products-container .card {
@@ -351,6 +359,8 @@ input[type=file] {
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
+  box-shadow: 1px 1px 2px #96ac92;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .card h5 {
@@ -359,17 +369,18 @@ input[type=file] {
   margin-bottom: 1rem;
 }
 
-.card a {
+.card a, .featured-seller-text a {
   text-decoration: none;
-  border-color: #005fc7;
+  border: 1px solid #005fc7;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   color: #005fc7;
 }
 
-.card:hover{
+.card a:hover, .featured-seller-text a:hover {
   background-color: #005fc7;
+  color: white;
 }
 
 #featured-products-inner, #sale-products-inner {
@@ -390,6 +401,7 @@ section {
 #featured-sellers-container {
   background-image: url(img/bg/tic-tac-toe.svg);
   background-color: #e5dbdb;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -401,18 +413,39 @@ section {
   border-bottom: 5px dashed white;
   border-top: 5px dashed white;
   width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.featured-seller-inner {
+  width: 100%;
+}
+
+#featured-sellers-inner {
+  max-width: 100%;
+  display: flex;
+  gap: 1rem;
 }
 
 #featured-sellers-inner img {
   object-fit: cover;
+  width: 50%;
+  box-shadow: 1px 1px 2px #ac9292;/.
 }
 
 .featured-seller-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   background: #e5dbdb;
   border-radius: 0 1rem 1rem 0;
+  padding: 1rem;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 1px 1px 2px #ac9292;
+}
+
+.image-left-card {
+  display: flex;
+  width: 50%;
 }
 
 .image-left-card img {
@@ -427,3 +460,4 @@ section:first-of-type {
 .image-card-container {
   overflow: hidden;
 }
+
