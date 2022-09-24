@@ -46,8 +46,13 @@ let featuredProducts = [];
 
 // Get local storage on page load
 function getData() {
+<<<<<<< HEAD:script.js
   allSellers = allSellers.concat(JSON.parse(localStorage.getItem('sellers')));
   allProducts = allProducts.concat(JSON.parse(localStorage.getItem('products')));
+=======
+  allSellers.push(JSON.parse(localStorage.getItem('sellers')));
+  allProducts.push(JSON.parse(localStorage.getItem('products')));
+>>>>>>> 0390228d147e65004592a16e30925653bbbfb15f:scripts/global.js
 }
 
 getData();
@@ -63,48 +68,6 @@ function syncProducts() {
 
 function syncBasket() {
   localStorage.setItem('basket', JSON.stringify(basket));
-}
-
-// Function to grab data from add seller page form and push to all sellers array
-
-function addSeller(event) {
-  event.preventDefault();
-  let sellerNameInput = event.target.sellerNameInput.value;
-  let sellerDescInput = event.target.sellerDescInput.value;
-  let sellerImageInput = event.target.sellerImageInput.value;
-  let newSeller = new seller(
-    sellerNameInput,
-    sellerDescInput,
-    sellerImageInput
-  );
-  allSellers.push(newSeller);
-  document.getElementById("add-seller-form").reset();
-  syncSellers();
-}
-
-// Function to grab data from add product page form and push to all products array
-
-function addProduct(event) {
-  event.preventDefault();
-  let productSellerInput = event.target.productSellerInput.value;
-  let productNameInput = event.target.productNameInput.value;
-  let productImageInput = event.target.productImageInput.value;
-  let productPriceInput = event.target.productPriceInput.value;
-  let productDiscountInput = event.target.productDiscountInput.value
-  let productStockInput = event.target.productStockInput.value;
-  let productDescInput = event.target.productDescInput.value;
-  let newProduct = new product(
-    productSellerInput,
-    productNameInput,
-    productImageInput,
-    productPriceInput,
-    productDiscountInput,
-    productStockInput,
-    productDescInput
-  );
-  allProducts.push(newProduct);
-  document.getElementById("add-product-form").reset();
-  syncProducts();
 }
 
 // Function to create cards from a seller array
@@ -174,12 +137,6 @@ function createCards(productList, cardCount, outputTarget) {
   }
 }
 
-// Create six product cards for featured products section on homepage
-createCards(allProducts, 6, 'featured-products-inner');
-
-// Create two seller cards for featured sellers section on homepage
-createSellerCards(allSellers, 2, 'featured-sellers-inner');
-
 // Create array of sales products
 function filterSaleProducts() {
   for (let i = 0; i < allProducts.length; i++) {
@@ -190,6 +147,7 @@ function filterSaleProducts() {
   }
 }
 
+<<<<<<< HEAD:script.js
 // Get a random item from an array.
 // arrayName represents the array you want to use.
 const getRandomArrayItem = function(arrayName) {
@@ -198,3 +156,34 @@ const getRandomArrayItem = function(arrayName) {
 
 let randomProducts = [];
 let randomSellers = [];
+=======
+// Carousel function (homepage)
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+>>>>>>> 0390228d147e65004592a16e30925653bbbfb15f:scripts/global.js
