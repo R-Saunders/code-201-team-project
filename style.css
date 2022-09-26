@@ -235,6 +235,15 @@ label {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+input, textarea, select {
+  width: 100%;
+}
+
+#productStockInput {
+  width: auto;
 }
 
 input[type=file] {
