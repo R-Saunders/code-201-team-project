@@ -38,16 +38,16 @@ class product {
 
 // Variables to store arrays of sellers/products
 
-let allSellers = [];
-let allProducts = [];
+let allSellers = JSON.parse(localStorage.getItem('sellers'));
+let allProducts = JSON.parse(localStorage.getItem('products'));
 let saleProducts = []
 let basket = [];
 let featuredProducts = [];
 
 // Get local storage on page load
 function getData() {
-  allSellers.push(JSON.parse(localStorage.getItem('sellers')));
-  allProducts.push(JSON.parse(localStorage.getItem('products')));
+  allSellers.concat(JSON.parse(localStorage.getItem('sellers')));
+  allProducts.concat(JSON.parse(localStorage.getItem('products')));
 }
 
 getData();
@@ -80,7 +80,7 @@ function createSellerCards(sellerList, sellerCardCount, outputTarget) {
     let cardImage = document.createElement('img');
     cardImage.classList.add('w-50');
     cardImage.alt = currentSeller.sellerName;
-    cardImage.src = 'img/sellers/' + currentSeller.sellerImage;
+    cardImage.src = currentSeller.sellerImage;
     card.appendChild(cardImage);
     let cardText = document.createElement('div');
     card.appendChild(cardText);
