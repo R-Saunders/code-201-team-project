@@ -76,13 +76,14 @@ function createSellerCards(sellerList, sellerCardCount, outputTarget) {
   for (let i = 0; i < sellerCardCount; i++) {
     let currentSeller = sellerList[i];
     let card = document.createElement('div');
-    card.classList.add('image-left-card','col-6','d-flex');
+    card.classList.add('image-left-card');
     let cardImage = document.createElement('img');
     cardImage.classList.add('w-50');
     cardImage.alt = currentSeller.sellerName;
     cardImage.src = currentSeller.sellerImage;
     card.appendChild(cardImage);
     let cardText = document.createElement('div');
+    cardText.classList.add('featured-seller-text')
     card.appendChild(cardText);
     let cardTitle = document.createElement('h3');
     cardTitle.innerHTML = currentSeller.sellerName;
@@ -93,6 +94,7 @@ function createSellerCards(sellerList, sellerCardCount, outputTarget) {
     let cardButton = document.createElement('a');
     cardButton.classList.add('btn','btn-primary');
     cardButton.innerHTML = `See more from ${currentSeller.sellerName}`;
+    cardText.appendChild(cardButton);
     cardOutput.appendChild(card);
   }
 }
