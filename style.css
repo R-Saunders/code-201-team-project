@@ -467,6 +467,7 @@ section {
 .featured-seller-text {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: #e5dbdb;
   border-radius: 0 1rem 1rem 0;
   padding: 1rem;
