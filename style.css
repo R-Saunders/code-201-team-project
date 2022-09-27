@@ -456,6 +456,7 @@ section {
   max-width: 100%;
   display: flex;
   gap: 1rem;
+  flex-flow: row wrap;
 }
 
 #featured-sellers-inner img {
@@ -474,11 +475,13 @@ section {
   align-items: flex-start;
   gap: 1rem;
   box-shadow: 1px 1px 2px #ac9292;
+  width: 100%;
 }
 
 .image-left-card {
   display: flex;
-  width: 50%;
+  min-width: 49%;
+  max-width: 49%;
 }
 
 .image-left-card img {
